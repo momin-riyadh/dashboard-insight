@@ -27,6 +27,13 @@ var KTSignupGeneral = (function () {
             },
           },
         },
+        company: {
+          validators: {
+            notEmpty: {
+              message: "Company name is required",
+            },
+          },
+        },
         email: {
           validators: {
             notEmpty: {
@@ -108,8 +115,8 @@ var KTSignupGeneral = (function () {
             name: jsonData["first-name"] + " " + jsonData["last-name"],
             email: jsonData.email,
             password: jsonData?.password,
-            role: "admin",
-            company: "KCL",
+            role: "user",
+            company: jsonData?.company,
           };
 
           console.log(jsonData); // Debugging
@@ -148,7 +155,9 @@ var KTSignupGeneral = (function () {
                   if (result.isConfirmed) {
                     form.reset(); // reset form
                     passwordMeter.reset(); // reset password meter
-                    location.replace(`/authentication/flows/basic/sign-in.html`)
+                    location.replace(
+                      `/authentication/flows/basic/sign-in.html`
+                    );
                   }
                 });
               } else {
