@@ -18,6 +18,7 @@
 
       tableauDiv.appendChild(footerDiv);
     });
-    console.log(JSON.parse(Cookies.get("auth")));
   });
 })();
+
+console.log(isAuthenticated());

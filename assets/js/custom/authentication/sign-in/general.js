@@ -64,7 +64,7 @@ var KTSigninGeneral = (function () {
             submitButton.disabled = false;
 
             // Perform the fetch request to login
-            fetch("http://localhost:8000/api/v1/auth/login", {
+            fetch("https://insights-server-q2wv.onrender.com/api/v1/auth/login", {
               method: "POST", // POST request
               headers: {
                 "Content-Type": "application/json", // Set the content type as JSON

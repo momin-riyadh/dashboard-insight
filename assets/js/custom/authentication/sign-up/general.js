@@ -118,7 +118,7 @@ var KTSignupGeneral = (function () {
           (async function () {
             try {
               const response = await fetch(
-                "http://localhost:8000/api/v1/auth/register",
+                "https://insights-server-q2wv.onrender.com/api/v1/auth/register",
                 {
                   method: "POST",
                   headers: {
